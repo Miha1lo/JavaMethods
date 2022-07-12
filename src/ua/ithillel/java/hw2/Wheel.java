@@ -4,8 +4,9 @@ public class Wheel {
     private String[] tiresType;
 
     public void printTiresType() {
+        System.out.println("Name of tire manufacturer:");
         for (int i = 0; i < tiresType.length; i++) {
-            System.out.println("Tire type " + (i + 1) + " wheel " + tiresType[i]);
+            System.out.println((i + 1) + " - " + tiresType[i]);
         }
     }
 
@@ -13,7 +14,7 @@ public class Wheel {
         return tiresType;
     }
 
-    public Wheel setTiresType(String[] tiresType) {
+    public void setTiresType(String[] tiresType) {
         this.tiresType = tiresType;
     }
 }

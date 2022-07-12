@@ -9,13 +9,15 @@ public class Car {
         this.color = color;
     }
 
-    public void PrintInfoCar(Engine engine, Transmission transmission) {
+    public void PrintInfoCar(Engine engine, Transmission transmission, Wheel wheel) {
         System.out.println("Model of car: " + model);
         System.out.println("Car color: " + color);
 
         engine.printEngineInfo();
 
         transmission.PrintInfoAboutTransmission();
+
+        wheel.printTiresType();
 
     }
 }

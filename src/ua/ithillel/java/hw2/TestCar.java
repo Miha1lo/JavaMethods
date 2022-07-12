@@ -4,7 +4,7 @@ public class TestCar {
 
     public static void main(String[] args) {
 
-        Car sedan = new Car("Lancer", "Black");
+        Car sedan = new Car("Lancer IX", "Black");
 
         Engine engineSedan = new Engine();
         engineSedan.setCilinders(4);
@@ -14,15 +14,9 @@ public class TestCar {
         Transmission transmissionSedan = new Transmission();
         transmissionSedan.setType("Mechanical");
 
-        Wheel[] tiresTypeSedan;
-        {
-            tiresTypeSedan = new Wheel[4];
-            tiresTypeSedan[0].setTiresType(new String[]{"TOYO"});
-            tiresTypeSedan[1].setTiresType("TOYO");
-            tiresTypeSedan[2].setTiresType("TOYO");
-            tiresTypeSedan[3].setTiresType("TOYO");
-        }
+        Wheel tiresTypeSedan = new Wheel();
+        tiresTypeSedan.setTiresType(new String[]{"TOYO", "Nokian", "Continental", "Bridgestone"});
 
-        sedan.PrintInfoCar(engineSedan, transmissionSedan);
+        sedan.PrintInfoCar(engineSedan, transmissionSedan,tiresTypeSedan);
     }
 }
