@@ -6,6 +6,12 @@ public class Engine {
     private double engineVolume;
     private int cilinders;
 
+    public Engine(int power, double engineVolume, int cilinders) {
+        this.power = power;
+        this.engineVolume = engineVolume;
+        this.cilinders = cilinders;
+    }
+
     public void printEngineInfo() {
         System.out.println("Engine characteristics: ");
         System.out.println("\t-Power: " + power);

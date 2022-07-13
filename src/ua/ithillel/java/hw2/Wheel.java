@@ -1,21 +1,19 @@
 package ua.ithillel.java.hw2;
 
 public class Wheel {
-    private String[] tiresType;
+    private String tireType;
+    private int radius;
+
+    public Wheel(String tireType, int radius) {
+        this.tireType = tireType;
+        this.radius = radius;
+    }
 
     public void printTiresType() {
-        System.out.println("Name of tire manufacturer:");
-        for (int i = 0; i < tiresType.length; i++) {
-            System.out.println((i + 1) + " - " + tiresType[i]);
-        }
-    }
 
-    public String[] getTiresType() {
-        return tiresType;
-    }
+        System.out.println("\t-Tire type: " + tireType);
+        System.out.println("\t-Radius: " + radius);
 
-    public void setTiresType(String[] tiresType) {
-        this.tiresType = tiresType;
     }
 }
 

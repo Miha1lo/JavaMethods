@@ -1,22 +1,25 @@
 package ua.ithillel.java.hw2;
 
+import java.util.Arrays;
+
 public class TestCar {
 
     public static void main(String[] args) {
 
-        Car sedan = new Car("Lancer IX", "Black");
+        Car sedan = new Car("Lancer IX EVO", "Black");
 
-        Engine engineSedan = new Engine();
-        engineSedan.setCilinders(4);
-        engineSedan.setPower(99);
-        engineSedan.setEngineVolume(1.6);
+        Wheel wheel1 = new Wheel("TOYO", 16);
+        Wheel wheel2 = new Wheel("TOYO", 16);
+        Wheel wheel3 = new Wheel("TOYO", 16);
+        Wheel wheel4 = new Wheel("TOYO", 16);
+        Wheel[] wheels = {wheel1, wheel2, wheel3, wheel4};
 
-        Transmission transmissionSedan = new Transmission();
-        transmissionSedan.setType("Mechanical");
+        sedan.setEngine(new Engine(136, 2.0, 4));
 
-        Wheel tiresTypeSedan = new Wheel();
-        tiresTypeSedan.setTiresType(new String[]{"TOYO", "Nokian", "Continental", "Bridgestone"});
+        sedan.setTransmission(new Transmission("Mechanical", 2004));
 
-        sedan.PrintInfoCar(engineSedan, transmissionSedan,tiresTypeSedan);
+        sedan.setWheels(wheels);
+
+        sedan.PrintInfoCar();
     }
 }
